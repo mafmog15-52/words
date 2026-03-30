@@ -35,6 +35,10 @@ public class WordRenderer {
      * Special case: 'ё' (U+0451) has its own file #U0451.png; falls back to #U0435.png (е).
      */
     private String getLetterAssetName(char ch) {
+        // Space maps to s.png
+        if (ch == ' ') {
+            return "s.png";
+        }        
         // Normalise to lower case
         ch = Character.toLowerCase(ch);
 
