@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Слова из букв</string>
+    <string name="app_subtitle">Составьте слово из картинок-букв</string>
+    <string name="label_word">Слово</string>
+    <string name="label_directory">Каталог сохранения</string>
+    <string name="hint_word">Введите слово (до 30 букв)</string>
+    <string name="no_dir_selected">Каталог не выбран</string>
+    <string name="btn_choose">Выбрать</string>
+    <string name="btn_generate">Создать картинку</string>
+    <string name="btn_open">Открыть файл</string>
+    <string name="error_empty_word">Введите слово</string>
+    <string name="error_no_dir">Выберите каталог для сохранения</string>
+    <string name="error_non_russian">Слово должно содержать только русские буквы</string>
+    <string name="status_generating">Создаю изображение…</string>
+    <string name="status_success">Готово! Сохранено: %1$s</string>
+    <string name="status_error">Ошибка: %1$s</string>
+</resources>
