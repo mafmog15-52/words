@@ -193,8 +193,7 @@ public class MainActivity extends AppCompatActivity {
                     throw new IOException("Нет прав на запись в выбранный каталог");
                 }
 
-                String fileName = word + ".png";
-                fileName = fileName.replace(' ', '_');
+                String fileName = (word + ".png").replace(' ', '_');
                 // Delete existing file with the same name if present
                 DocumentFile existing = dir.findFile(fileName);
                 if (existing != null) existing.delete();
