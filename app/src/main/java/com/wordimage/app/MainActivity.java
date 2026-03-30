@@ -158,9 +158,10 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    /** Only Cyrillic letters (а–я + ё, А–Я + Ё) are allowed. */
+    /** Only Cyrillic letters (а–я + ё, А–Я + Ё) and spaces are allowed. */
     private boolean isRussianWord(String word) {
         for (char c : word.toCharArray()) {
+            if (c == ' ') continue; // space → s.png
             if (!Character.UnicodeBlock.of(c).equals(Character.UnicodeBlock.CYRILLIC)) {
                 return false;
             }
@@ -193,6 +194,7 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 String fileName = word + ".png";
+                fileName = fileName.replace(' ', '_');
                 // Delete existing file with the same name if present
                 DocumentFile existing = dir.findFile(fileName);
                 if (existing != null) existing.delete();
